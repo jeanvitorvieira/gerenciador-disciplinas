@@ -62,7 +62,7 @@ public class DisciplinaController {
             @ApiResponse(responseCode = "204", description = "Disciplina excluída com sucesso"),
             @ApiResponse(responseCode = "404", description = "Disciplina não encontrada")
     })
-    @DeleteMapping(path = "/delete/{id}")
+    @DeleteMapping(path = "/{id}")
     public ResponseEntity<Void> deletarDisciplina(@PathVariable UUID id) {
         disciplinaService.deleteDisciplina(id);
         return ResponseEntity.noContent().build();
